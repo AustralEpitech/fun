@@ -5,15 +5,14 @@
 
 static char *genstr(const char *o, char *n)
 {
-    int count;
-    char *oldn = n;
+    int count, ni = 0;
 
-    for (int i = 0; o[i] && i < SIZE; i += count) {
+    for (int i = 0; o[i] && ni < SIZE - 2; i += count) {
         for (count = 0; o[i + count] == o[i]; count++);
-        *n++ = count + '0';
-        *n++ = o[i];
+        n[ni++] = count + '0';
+        n[ni++] = o[i];
     }
-    return oldn;
+    return n;
 }
 
 static void conway(int n)
