@@ -1,10 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SIZE 1024
+#define SIZE 2048
 
-static char *genstr(const char *o, char *n)
-{
+static char *genstr(const char *o, char *n) {
     int count, ni = 0;
 
     for (int i = 0; o[i] && ni < SIZE - 2; i += count) {
@@ -15,8 +14,7 @@ static char *genstr(const char *o, char *n)
     return n;
 }
 
-static void conway(int n)
-{
+static void conway(int n) {
     char s[2][SIZE] = {{0}, "1"};
 
     puts(s[1]);
@@ -25,8 +23,7 @@ static void conway(int n)
     }
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     int n;
 
     if (argc != 2) {

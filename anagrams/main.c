@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-static void print_anagrams(char *s)
-{
+static void print_anagrams(char *s) {
     static char *p = NULL;
     char tmp;
 
@@ -20,8 +19,7 @@ static void print_anagrams(char *s)
     }
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     if (argc != 2) {
         return 1;
     }
